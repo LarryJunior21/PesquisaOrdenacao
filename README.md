@@ -2,7 +2,7 @@
 
 ## Desenvolvido em Java usando NetBeans
 
-_Metodos Utilizados: 
+_Metodos Utilizados:_
 * Inserção Direta e Inserção Binária;
 * Seleção Direta;
 * Bolha e Shake;
