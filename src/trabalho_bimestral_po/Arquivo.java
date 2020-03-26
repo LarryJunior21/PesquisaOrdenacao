@@ -484,6 +484,7 @@ public class Arquivo
             reg.leDoArq(arquivo);
             while(reg.getNumero()<pivo.getNumero())
             {
+                comp++;
                 i++;
                 seekArq(i);
                 reg.leDoArq(arquivo);
@@ -492,6 +493,7 @@ public class Arquivo
             reg2.leDoArq(arquivo);
             while(reg2.getNumero()>pivo.getNumero())
             {
+                comp++;
                 j--;
                 seekArq(j);
                 reg2.leDoArq(arquivo);
@@ -502,6 +504,7 @@ public class Arquivo
                 reg.gravaNoArq(arquivo);
                 i++;
                 j--;
+                mov+=2;
         }
         if(ini<j)
             QuickCP(ini, j);
@@ -952,7 +955,7 @@ public class Arquivo
     public void geraArquivoOrdenado() 
     {
         
-        for(int i=0;i<=5;i++)
+        for(int i=0;i<30;i++)
         {
             Registro r = new Registro(i);
             r.gravaNoArq(arquivo);
@@ -962,7 +965,7 @@ public class Arquivo
     
     public void geraArquivoReverso() 
     {
-        for(int i=5;i>=0;i--)
+        for(int i=30;i>=0;i--)
         {
             Registro r = new Registro(i);
             r.gravaNoArq(arquivo);
@@ -973,7 +976,7 @@ public class Arquivo
     {
         Registro r = new Registro();
         seekArq(0);
-        for(int i=0; i<=5;i++)
+        for(int i=0; i<=30;i++)
         {
             r.leDoArq(arquivo);
             System.out.println(r.getNumero());
@@ -982,10 +985,9 @@ public class Arquivo
     public void geraArquivoRandomico()
     {
         Random gerador = new Random();
-        for(int i=0;i<=5;i++)
+        for(int i=0;i<30;i++)
         {
-            Registro r = new Registro(i);
-            r.setNumero(gerador.nextInt(10));
+            Registro r = new Registro(gerador.nextInt(10));
             r.gravaNoArq(arquivo);
         }
     }

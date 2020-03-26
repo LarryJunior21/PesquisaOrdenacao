@@ -1,44 +1,40 @@
 package trabalho_bimestral_po;
 
-/**
- *
- * @author Aluno
- */
-public class Lista
+public class No
 {
-    private Lista Ant;
-    private Lista Prox;
+    private No Ant;
+    private No Prox;
     private int Info;
 
-    public Lista(Lista Ant, Lista Prox, int Info)
+    public No(No Ant, No Prox, int Info)
     {
         this.Ant = Ant;
         this.Prox = Prox;
         this.Info = Info;
     }
     
-    public Lista(int Info)
+    public No(int Info)
     {
         this.Ant = this.Prox = null;
         this.Info = Info;
     }
     
-    public Lista getAnt()
+    public No getAnt()
     {
         return Ant;
     }
 
-    public void setAnt(Lista Ant)
+    public void setAnt(No Ant)
     {
         this.Ant = Ant;
     }
 
-    public Lista getProx()
+    public No getProx()
     {
         return Prox;
     }
 
-    public void setProx(Lista Prox)
+    public void setProx(No Prox)
     {
         this.Prox = Prox;
     }
