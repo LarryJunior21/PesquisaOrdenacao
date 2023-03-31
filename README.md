@@ -1,5 +1,3 @@
-# Trabalho Bimestral de Pesquisa e Ordenação
-
 ## Desenvolvido em Java usando NetBeans
 
 _Metodos Utilizados:_
